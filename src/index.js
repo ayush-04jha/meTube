@@ -3,7 +3,29 @@ import dotenv from "dotenv";
 import connectDB from "./db/index.js";
 dotenv.config({path:"./env"}) // dotenv ko env file ka path diya
 
-connectDB(); // kyuki yeh ek function hai
+connectDB() // yeh ek async code hai... or her async code ek promise return krta hai.... thats why we can apply then and catch
+.then(()=>{
+    app.on("error",(error)=>{  // kya pata express baat naa kr paa rha ho mongodb se 
+        console.log("errror:",error);
+        
+    })
+    app.listen(process.env.PORT||8000,()=>{
+         console.log(`server is running at port : ${process.env.PORT}`);
+         
+    })
+})
+.catch((error)=>{
+    console.log("MONGODB connect failed!!!",error);
+    
+})
+
+
+
+
+
+
+
+
 /*
 import express from "express";
 const app = express();
