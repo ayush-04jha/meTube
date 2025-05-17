@@ -1,6 +1,7 @@
 //require('dotenv').config({path:'./env'})  // this is inconsistent so we will use import method
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
+import { app } from "./app.js";
 dotenv.config({path:"./env"}) // dotenv ko env file ka path diya
 
 connectDB() // yeh ek async code hai... or her async code ek promise return krta hai.... thats why we can apply then and catch
