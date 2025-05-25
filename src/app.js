@@ -1,3 +1,4 @@
+// yaha express ki sarri cheezo ka logic hota hai
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
