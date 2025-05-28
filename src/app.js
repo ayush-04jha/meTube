@@ -20,5 +20,6 @@ import userRouter from "./routes/user.routes.js"
 
 // routes declaration
 app.use("/api/v1/users",userRouter) // jaise he /user type kiya , controle userRouter ko chala gaya
-
+// pehla hum app.use ki jagah app.get ka use kr rhe the kyuki ham route usi ke ander defin kr rhe the... but ab hamne route agal file me define kr rkha hai 
+// toh hum usko middleware ki tarah likhenge  
 export {app}

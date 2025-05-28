@@ -1,5 +1,5 @@
 import { v2 as cloudinary } from "cloudinary";
-import fs from "fs"; //(file system) yeh nodejs me he inbuilt ata  hai... no need to installit
+import fs from "fs"; //(file system) yeh nodejs me he inbuilt ata  hai... no need to install it(used to manage file system... read write remove)
 
 // Configuration
 cloudinary.config({
@@ -8,7 +8,7 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-uploadOnCloudinary = async (localFilePath) => {
+const uploadOnCloudinary = async (localFilePath) => { // yeh function ham bana rhe hai taki... file ko local storage se lekr cloudinary ki help se upload krde cloude storage me
   try {
     if (!localFilePath) return null;
     // upload the file on cloudinary
@@ -24,5 +24,5 @@ uploadOnCloudinary = async (localFilePath) => {
     return null;
   }
 };
-
-export {uploadOnCloudinary}
+ 
+export {uploadOnCloudinary} 
