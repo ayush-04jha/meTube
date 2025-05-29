@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema(
       trim: true,
       index: true,
     },
-    enmai: {
+    email: {
       type: String,
       required: true,
       unique: true,

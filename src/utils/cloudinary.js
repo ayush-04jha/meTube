@@ -16,7 +16,8 @@ const uploadOnCloudinary = async (localFilePath) => { // yeh function ham bana r
       resource_type: "auto",
     });
     // file has been uploaded successfully
-    console.log("file is uploaded on cloudinary",response.url);
+    //console.log("file is uploaded on cloudinary",response.url);
+    fs.unlinkSync(localFilePath) // cloudinary me file upload hone ke baad localstorage se del ho jaygi file
     return response;
     
   } catch (error) {
